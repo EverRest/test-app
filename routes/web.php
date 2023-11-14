@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,8 @@ Route::view('dashboard', 'dashboard')
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
+
+Route::view('terms-and-conditions', 'terms')
+    ->name('terms-and-conditions');
 
 require __DIR__.'/auth.php';
