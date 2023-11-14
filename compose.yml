@@ -1,0 +1,52 @@
+version: '3.9'
+services:
+  app:
+    container_name: app
+    restart: unless-stopped
+    tty: true
+    build: .
+    environment:
+      SERVICE_NAME: ${APP_NAME}
+      SERVICE_TAGS: ${APP_ENV}
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - test-app-network
+  webserver:
+    image: nginx:alpine
+    container_name: webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - test-app-network
+  db:
+    image: mysql:8.0
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+      - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - test-app-network
+networks:
+  test-app-network:
+    driver: bridge
+volumes:
+  dbdata:
+    driver: local
