@@ -34,7 +34,8 @@ RUN docker-php-ext-install gd
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install Node.js 16.x
+
+# Install Node.js 16.x to build JS assets
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs npm
 
@@ -45,6 +46,9 @@ RUN useradd -u 1000 -ms /bin/bash -g www www
 # Copy existing application directory contents
 COPY . /var/www
 
+# Install composer dependencies
+RUN composer install
+
 # Copy existing application directory permissions
 COPY --chown=www:www . /var/www
 
@@ -54,3 +58,4 @@ USER www
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
+CMD ["composer", "install"]
