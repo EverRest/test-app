@@ -29,32 +29,30 @@ List of implementation:
     <li>PHP>=8.1</li>
     <li>Laravel>=10</li>
     <li>MYSQL>=8</li>
-    <li>Implemented SPA with SSR with Laravel Livewire</li>
-    <li>Views was implemented via Laravel Breeze</li>
+    <li>Implemented SPA with SSR with <a href="https://livewire.laravel.com">Laravel Livewire</a></li>
+    <li>Views was implemented via <a href="https://laravel.com/docs/10.x/starter-kits#breeze-and-livewire">Laravel Breeze</li>
 </ul>
 
 ## Set Up
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+You need to have docker on your local machine to run application via docker or `MYSQL8` and `PHP8.1` if you dont. Please check the list of installation steps. We describing the case if yu want to use docker-compose.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Step by step:
+<ul>
+    <li>1. `cp .env.example .env` and fill properly `.env` </li>
+    <li>2. `docker-compose up -d`</li>
+    <li>2. `docker-compose run app php artisan migrate`</li>
+</ul>
 
 ## Security
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-Security check list:
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Security features:
+<ul>
+    <li>Used CSRF token on all forms for all non-idempotent requests</li>
+    <li>Added strong validation for all forms and fields</li>
+    <li>Implemened XSS sanitizer middleware to sanitize user's input</li>
+    <li>Added custom validation rule to validate strings for internal spaces</li>
+    <li>Added throttling for requests</li>
+    <li>Livewire approach is helping to control ui part more better</li>
+    <li>Implemented session authentication for the user</li>
+</ul>
