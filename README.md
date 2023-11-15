@@ -3,8 +3,8 @@
 ## Description
 
 Please check `software_engineering_candidates.pdf` in the root of the repository for details.
-
-1. Сreate a user registration form that consists of the following input fields:
+<ul>
+ <li>1. Сreate a user registration form that consists of the following input fields:</li>
 <ul>
     <li>Username</li>
     <li>Email</li>
@@ -13,9 +13,10 @@ Please check `software_engineering_candidates.pdf` in the root of the repository
     <li>Agreement checkbox</li>
     <li>Register button</li>
     </ul>
-2. Save user data in the database.
-3. Create a login form where the user can login to the system.
-Task Requirements
+<li>2. Save user data in the database.</li>
+<li>3. Create a login form where the user can login to the system.</li>
+</ul>
+    Task Requirements
 1. Use Laravel Framework and MySQL database.
 2. The form should be secure.Try to implement as many security checks as you
 can.
