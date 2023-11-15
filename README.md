@@ -2,17 +2,21 @@
 
 ## Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Please check `software_engineering_candidates.pdf` in the root of the repository for details.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Сreate a user registration form that consists of the following input fields:
+● Username
+● Email
+● Password
+● Password confirmation
+● Agreement checkbox
+● Register button
+2. Save user data in the database.
+3. Create a login form where the user can login to the system.
+Task Requirements
+1. Use Laravel Framework and MySQL database.
+2. The form should be secure.Try to implement as many security checks as you
+can.
 
 ## Implementation
 
