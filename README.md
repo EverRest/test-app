@@ -36,7 +36,7 @@ List of implementation:
 
 ## Set Up
 
-You need to have docker on your local machine to run application via docker or `MYSQL8` and `PHP8.1` if you dont. Please check the list of installation steps. I described the case when you are using docker-compose.
+You must have docker installed on your local machine to run application with `compose.yml` or `MYSQL8` and `PHP8.1` as well if you dont. Please check the list of installation steps. I described the case when you are using docker-compose.
 
 Step by step:
 <ul>
