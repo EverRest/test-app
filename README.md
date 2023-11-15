@@ -55,9 +55,9 @@ Security features:
     <li>Used CSRF token on all forms for all non-idempotent requests</li>
     <li>Added strong validation for all forms and fields</li>
     <li>Implemened XSS sanitizer middleware to sanitize user's input</li>
-    <li>Added custom validation rule to validate strings for internal spaces</li>
+    <li>Added custom validation rule to validate strings with internal spaces</li>
     <li>Added throttling for requests</li>
     <li>Livewire approach is helping to control ui part more better</li>
-    <li>Eloquent ORM escaping users input for SQL injections and other vulnerabilities</li>
+    <li>Eloquent ORM is escaping users input for SQL injections and other vulnerabilities</li>
     <li>Implemented session authentication for the user</li>
 </ul>
