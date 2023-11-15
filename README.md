@@ -41,7 +41,7 @@ You need to have docker on your local machine to run application via docker or `
 Step by step:
 <ul>
     <li>0. `git clone https://github.com/EverRest/test-app.git`</li>
-    <li>1. `cd test-app && cp .env.example .env`, set app key and fill properly `.env` </li>
+    <li>1. `cd test-app && cp .env.example .env`, set app key</li>
     <li>2. `docker-compose up -d`</li>
     <li>3. `docker-compose run app composer i`</li>
     <li>4. `docker-compose run app npm i`</li>
