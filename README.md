@@ -42,6 +42,7 @@ Step by step:
 <ul>
     <li>1. `cp .env.example .env` and fill properly `.env` </li>
     <li>2. `docker-compose up -d`</li>
+    <li>2. `docker-compose run app composer i`</li>
     <li>2. `docker-compose run app php artisan migrate`</li>
 </ul>
 
