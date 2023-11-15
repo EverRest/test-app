@@ -58,7 +58,7 @@ Security features:
     <li>Added strong validation for all forms and fields</li>
     <li>Implemened XSS sanitizer middleware to sanitize user's input</li>
     <li>Added custom validation rule to validate strings with internal spaces</li>
-    <li>Added throttling for requests</li>
+    <li>Added throttling for user's requests</li>
     <li>Livewire approach is helping us to control UI more effectively because of SSR for all components</li>
     <li>Eloquent ORM is escaping users input for SQL injections and other vulnerabilities</li>
     <li>Escaping displaying data on view for tags with `{{}}`</li>
