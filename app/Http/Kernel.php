@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Http;
 
@@ -35,6 +36,7 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
+            \App\Http\Middleware\XssSanitizer::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -42,6 +44,7 @@ class Kernel extends HttpKernel
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\XssSanitizer::class,
         ],
     ];
 
