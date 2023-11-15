@@ -77,7 +77,7 @@ new #[Layout('layouts.guest')] class extends Component {
 
 
         <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')"/>
+            <x-input-label for="agreement" :value={{'Terms and conditions agreement'}}/>
             <x-checkbox-agreement required id="agreement" type="checkbox"
                                   class="dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
                                   name="agreement"/>
