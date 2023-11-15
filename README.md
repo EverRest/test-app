@@ -44,6 +44,7 @@ Step by step:
     <li>1. `cd test-app && cp .env.example .env`, set `APP_KEY`. Supported ciphers are: aes-128-cbc, aes-256-cbc, aes-128-gcm, aes-256-gcm</li>
     <li>2. `docker-compose up -d`</li>
     <li>3. `docker-compose run app composer i`</li>
+    <li>3a. `docker-compose run app php artisan key:generate`</li>
     <li>4. `docker-compose run app npm i`</li>
     <li>5. `docker-compose run app npm run build`</li>
     <li>6. `docker-compose run app php artisan migrate`</li>
