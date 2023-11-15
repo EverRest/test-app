@@ -41,13 +41,13 @@ You must have docker installed on your local machine to run application with `co
 Step by step:
 <ul>
     <li>0. `git clone https://github.com/EverRest/test-app.git`</li>
-    <li>1. `cd test-app && cp .env.example .env`, set app key. Supported ciphers are: aes-128-cbc, aes-256-cbc, aes-128-gcm, aes-256-gcm</li>
+    <li>1. `cd test-app && cp .env.example .env`, set `APP_KEY`. Supported ciphers are: aes-128-cbc, aes-256-cbc, aes-128-gcm, aes-256-gcm</li>
     <li>2. `docker-compose up -d`</li>
     <li>3. `docker-compose run app composer i`</li>
     <li>4. `docker-compose run app npm i`</li>
     <li>5. `docker-compose run app npm run build`</li>
     <li>6. `docker-compose run app php artisan migrate`</li>
-    <li>6a. if you have problem with generating valid app key feel free to use console command `docker-compose run app php artisan key:generate` to generate new one</li>
+    <li>6a. if you have problem with generating valid `APP_KEY` feel free to use console command `docker-compose run app php artisan key:generate` to generate new one</li>
 </ul>
 
 ## Security
