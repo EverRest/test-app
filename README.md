@@ -41,12 +41,12 @@ You need to have docker on your local machine to run application via docker or `
 Step by step:
 <ul>
     <li>0. `git clone https://github.com/EverRest/test-app.git`</li>
-    <li>1. `cd test-app && cp .env.example .env` and fill properly `.env` </li>
-    <li>2. `docker-compose run app php artisan key:generate`</li>
-    <li>3. `docker-compose up -d`</li>
+    <li>1. `cd test-app && cp .env.example .env`, set app key and fill properly `.env` </li>
+    <li>2. `docker-compose up -d`</li>
+    <li>3. `docker-compose run app composer i`</li>
     <li>4. `docker-compose run app npm i`</li>
     <li>5. `docker-compose run app npm run build`</li>
-    <li>5. `docker-compose run app php artisan migrate`</li>
+    <li>6. `docker-compose run app php artisan migrate`</li>
 </ul>
 
 ## Security
