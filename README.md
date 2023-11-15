@@ -17,9 +17,10 @@ Please check `software_engineering_candidates.pdf` in the root of the repository
 <li>3. Create a login form where the user can login to the system.</li>
 </ul>
     Task Requirements
-1. Use Laravel Framework and MySQL database.
-2. The form should be secure.Try to implement as many security checks as you
-can.
+<ul>
+    <li>1. Use Laravel Framework and MySQL database.</li>
+    <li>2. The form should be secure.Try to implement as many security checks as you can.</li>
+</ul>
 
 ## Implementation
 
