@@ -10,10 +10,12 @@ use Illuminate\Validation\Rules;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 use App\Rules\NoSpaces;
+use Illuminate\Support\Arr;
 
 new #[Layout('layouts.guest')] class extends Component {
     public string $name = '';
     public string $email = '';
+    public bool $agreement = false;
     public string $password = '';
     public string $password_confirmation = '';
 
@@ -24,16 +26,13 @@ new #[Layout('layouts.guest')] class extends Component {
     {
         $validated = $this->validate([
             'name' => ['required', 'string', 'max:255',],
+            'agreement' => ['required', 'boolean'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class, new NoSpaces()],
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults(), new NoSpaces()],
         ]);
-
         $validated['password'] = Hash::make($validated['password']);
-
-        event(new Registered($user = User::create($validated)));
-
+        event(new Registered($user = User::create(Arr::except($validated, 'agreement'))));
         Auth::login($user);
-
         $this->redirect(RouteServiceProvider::HOME, navigate: true);
     }
 }; ?>
@@ -80,7 +79,7 @@ new #[Layout('layouts.guest')] class extends Component {
         <div class="mt-4">
             <x-input-label for="password_confirmation" :value="__('Confirm Password')"/>
             <x-checkbox-agreement required id="agreement" type="checkbox"
-                                      class="dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
+                                  class="dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
                                   name="agreement"/>
         </div>
 
