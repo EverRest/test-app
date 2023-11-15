@@ -24,7 +24,14 @@ Please check `software_engineering_candidates.pdf` in the root of the repository
 
 ## Implementation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+List of implementation:
+<ul>
+    <li>PHP>=8.1</li>
+    <li>Laravel>=10</li>
+    <li>MYSQL>=8</li>
+    <li>Implemented SPA with SSR with Laravel Livewire</li>
+    <li>Views was implemented via Laravel Breeze</li>
+</ul>
 
 ## Set Up
 
