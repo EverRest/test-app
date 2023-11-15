@@ -24,7 +24,6 @@ RUN apt-get update && apt-get install -y \
     libgd-dev
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-#Mine
 
 # Install extensions
 RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
@@ -33,7 +32,6 @@ RUN docker-php-ext-install gd
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
 
 # Install Node.js 16.x to build JS assets
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
