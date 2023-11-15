@@ -5,12 +5,14 @@
 Please check `software_engineering_candidates.pdf` in the root of the repository for details.
 
 1. Сreate a user registration form that consists of the following input fields:
-● Username
-● Email
-● Password
-● Password confirmation
-● Agreement checkbox
-● Register button
+<ul>
+    <li>Username</li>
+    <li>Email</li>
+    <li>Password</li>
+    <li>Password confirmation</li>
+    <li>Agreement checkbox</li>
+    <li>Register button</li>
+    </ul>
 2. Save user data in the database.
 3. Create a login form where the user can login to the system.
 Task Requirements
