@@ -54,5 +54,6 @@ Security features:
     <li>Added custom validation rule to validate strings for internal spaces</li>
     <li>Added throttling for requests</li>
     <li>Livewire approach is helping to control ui part more better</li>
+    <li>Eloquent ORM escaping users input for SQL injections and other vulnerabilities</li>
     <li>Implemented session authentication for the user</li>
 </ul>
