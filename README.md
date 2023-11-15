@@ -29,6 +29,7 @@ List of implementation:
     <li>PHP>=8.1</li>
     <li>Laravel>=10</li>
     <li>MYSQL>=8</li>
+    <li>Implemented `compose.yml` for development with `php`,`mysql`, `nginx` configuration files</li>
     <li>Implemented SPA with SSR with <a href="https://livewire.laravel.com">Laravel Livewire</a></li>
     <li>Views was implemented via <a href="https://laravel.com/docs/10.x/starter-kits#breeze-and-livewire">Laravel Breeze</li>
 </ul>
