@@ -47,7 +47,7 @@ Step by step:
     <li>4. `docker-compose run app npm i`</li>
     <li>5. `docker-compose run app npm run build`</li>
     <li>6. `docker-compose run app php artisan migrate`</li>
-    <li>6a. if you have problem with generating valid app key feel free to use console command `docker-compose run app php artisan key:generate `</li>
+    <li>6a. if you have problem with generating valid app key feel free to use console command `docker-compose run app php artisan key:generate` to generate new one</li>
 </ul>
 
 ## Security
