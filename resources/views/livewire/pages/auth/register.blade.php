@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
@@ -8,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
+use App\Rules\NoSpaces;
 
 new #[Layout('layouts.guest')] class extends Component {
     public string $name = '';
@@ -21,9 +23,9 @@ new #[Layout('layouts.guest')] class extends Component {
     public function register(): void
     {
         $validated = $this->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
-            'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
+            'name' => ['required', 'string', 'max:255',],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class, new NoSpaces()],
+            'password' => ['required', 'string', 'confirmed', Rules\Password::defaults(), new NoSpaces()],
         ]);
 
         $validated['password'] = Hash::make($validated['password']);
