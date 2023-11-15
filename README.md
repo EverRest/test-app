@@ -61,6 +61,6 @@ Security features:
     <li>Added throttling for requests</li>
     <li>Livewire approach is helping to control ui part more better because of SSR for views</li>
     <li>Eloquent ORM is escaping users input for SQL injections and other vulnerabilities</li>
-    <li>Escaping displaying data in tags with `{{}}`</li>
+    <li>Escaping displaying data on view for tags with `{{}}`</li>
     <li>Implemented session authentication for the user</li>
 </ul>
